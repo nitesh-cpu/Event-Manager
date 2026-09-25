@@ -1,5 +1,5 @@
 // Global API Base Configuration
-const API_BASE_URL = 'http://127.0.0.1:8000/api';
+const API_BASE_URL = 'https://event-manager-backend-jtze.onrender.com/api';
 
 // Helper to get CSRF token from cookies
 function getCookie(name) {
