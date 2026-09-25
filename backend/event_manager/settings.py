@@ -5,9 +5,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-event-manager-rest-api-key-local-dev'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['event-manager-backend-jtze.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
