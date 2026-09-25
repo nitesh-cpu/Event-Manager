@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index">
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-calendar-check logo-icon"></i>
+                <div class="logo-text">
+                    <h1>Event Manager</h1>
+                    <p>College Event System</p>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks"></ul>
+            <div class="header-actions" id="headerActions"></div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button style="background: none; border: none; font-size: 1.5rem; cursor: pointer;" id="closeMobileNav">&times;</button>
+        </div>
+        <ul class="mobile-nav-links" id="mobileNavLinks"></ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div id="alertContainer" class="messages-container"></div>
+
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Discover & Organize College Events</h2>
+                    <p>Stay updated with workshops, hackathons, seminars, and cultural fests happening around campus.</p>
+                </div>
+            </section>
+
+            <!-- Stats Dashboard -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon events"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div class="stat-info">
+                        <h3 id="totalEventsCount">0</h3>
+                        <p>Total Events</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon registered"><i class="fa-solid fa-ticket"></i></div>
+                    <div class="stat-info">
+                        <h3 id="userRegisteredCount">0</h3>
+                        <p>My Registrations</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon created"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="stat-info">
+                        <h3 id="userCreatedCount">0</h3>
+                        <p>My Hosted Events</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search & Filter Section -->
+            <div class="search-filter-section">
+                <form id="searchForm" class="search-form">
+                    <div class="search-input-group">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" placeholder="Search events by title, location, or keyword...">
+                    </div>
+                    <div class="filter-group">
+                        <button type="button" class="filter-btn active" data-filter="all">All</button>
+                        <button type="button" class="filter-btn" data-filter="upcoming">Upcoming</button>
+                        <button type="button" class="filter-btn" data-filter="past">Past</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-filter"></i> Search</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="events-grid" id="eventsGrid"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3><i class="fa-solid fa-calendar-check"></i> College Event Manager</h3>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Organize, discover, and participate in campus events effortlessly.</p>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2026 College Event Manager. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Frontend Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
